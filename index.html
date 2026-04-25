@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know About Pakistan — 1947 to 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --forest:#0b1f10;
+  --deep:#0f2a15;
+  --pine:#16391e;
+  --moss:#1e5228;
+  --fern:#276e35;
+  --sage:#4a9a5c;
+  --gold:#c9a84c;
+  --gold2:#e2c06a;
+  --gold3:#f0d898;
+  --goldglow:rgba(201,168,76,0.15);
+  --cream:#f8f2e3;
+  --parch:#f2ebd6;
+  --ivory:#fffef8;
+  --dark:#0a0e0b;
+  --crimson:#8b1515;
+  --crimson2:#a01c1c;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--cream);font-family:'Cormorant Garamond',serif;overflow-x:hidden;}
+
+/* ===== GRAIN OVERLAY ===== */
+body::before{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1.2rem 4rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:linear-gradient(180deg,rgba(10,14,11,0.98) 0%,transparent 100%);
+  border-bottom:1px solid rgba(201,168,76,0.12);
+  backdrop-filter:blur(4px);
+}
+.nav-brand{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;
+  display:flex;align-items:center;gap:1rem;
+}
+.nav-brand .star{font-size:1.4rem;animation:spin 20s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.nav-links{display:flex;gap:2.5rem;}
+.nav-links a{
+  font-family:'Rajdhani',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.45);
+  text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-badge{
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;letter-spacing:2px;
+  color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:4px 14px;border-radius:20px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;text-align:center;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(30,82,40,0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 20%, rgba(30,82,40,0.2) 0%, transparent 60%),
+    var(--forest);
+}
+.hero-pattern{
+  position:absolute;inset:0;opacity:0.04;
+  background-image:
+    repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%),
+    repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+  background-size:30px 30px;
+}
+.hero-content{position:relative;z-index:2;max-width:900px;padding:2rem;}
+
+.hero-eyebrow{
+  font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:6px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;
+  animation:fadeUp 1s ease both;
+}
+.hero-crescent{
+  font-size:4rem;margin-bottom:1rem;
+  animation:fadeUp 1s 0.2s ease both;
+  filter:drop-shadow(0 0 30px rgba(201,168,76,0.5));
+}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3rem,8vw,6rem);
+  font-weight:900;color:#fff;line-height:1.05;
+  margin-bottom:0.5rem;
+  animation:fadeUp 1s 0.3s ease both;
+}
+.hero-title span{color:var(--gold);display:block;}
+.hero-urdu{
+  font-size:clamp(1.5rem,4vw,2.5rem);
+  color:rgba(255,255,255,0.25);
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  letter-spacing:2px;margin-bottom:2rem;
+  animation:fadeUp 1s 0.4s ease both;
+}
+.hero-line{
+  width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:0 auto 2rem;animation:fadeUp 1s 0.5s ease both;
+}
+.hero-desc{
+  font-family:'Cormorant Garamond',serif;font-size:1.2rem;
+  color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto 3rem;
+  line-height:1.8;font-style:italic;
+  animation:fadeUp 1s 0.6s ease both;
+}
+.hero-stats{
+  display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;
+  animation:fadeUp 1s 0.7s ease both;
+}
+.hstat{text-align:center;}
+.hstat-num{
+  font-family:'Playfair Display',serif;font-size:2.2rem;
+  color:var(--gold);font-weight:700;line-height:1;
+}
+.hstat-label{
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;
+  color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-top:4px;
+}
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  animation:bounce 2s infinite;
+}
+.hero-scroll span{font-family:'Rajdhani',sans-serif;font-size:0.6rem;letter-spacing:3px;color:rgba(255,255,255,0.3);text-transform:uppercase;}
+.hero-scroll div{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* ===== SECTION BASE ===== */
+section{padding:6rem 0;}
+.container{max-width:1200px;margin:0 auto;padding:0 4rem;}
+.sec-label{
+  font-family:'Rajdhani',sans-serif;font-size:0.68rem;letter-spacing:5px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:0.8rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.sec-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--gold);opacity:0.5;}
+.sec-title{
+  font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);
+  color:var(--cream);font-weight:700;line-height:1.2;margin-bottom:1rem;
+}
+.sec-title em{color:var(--gold);font-style:normal;}
+.sec-desc{
+  font-size:1.1rem;color:rgba(255,255,255,0.5);
+  max-width:600px;line-height:1.8;margin-bottom:3rem;
+}
+
+/* ===== OVERVIEW SECTION ===== */
+#overview{background:var(--dark);}
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.overview-text p{
+  font-size:1.1rem;color:rgba(255,255,255,0.6);line-height:1.9;
+  margin-bottom:1.2rem;
+}
+.overview-facts{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;}
+.fact-box{
+  border:1px solid rgba(201,168,76,0.2);border-radius:8px;
+  padding:1.2rem 1.5rem;background:rgba(201,168,76,0.04);
+  transition:border-color 0.3s;
+}
+.fact-box:hover{border-color:rgba(201,168,76,0.5);}
+.fact-box h4{
+  font-family:'Playfair Display',serif;font-size:1.6rem;
+  color:var(--gold);font-weight:700;margin-bottom:0.2rem;
+}
+.fact-box p{font-family:'Rajdhani',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;}
+.emblem-display{
+  position:relative;display:flex;align-items:center;justify-content:center;
+}
+.emblem-ring{
+  width:350px;height:350px;border-radius:50%;
+  border:1px solid rgba(201,168,76,0.2);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;animation:rotateSlow 60s linear infinite;
+}
+.emblem-ring::before{
+  content:'';position:absolute;inset:10px;border-radius:50%;
+  border:1px dashed rgba(201,168,76,0.1);
+}
+@keyframes rotateSlow{to{transform:rotate(360deg);}}
+.emblem-inner{
+  animation:rotateSlow 60s linear infinite reverse;
+  font-size:8rem;filter:drop-shadow(0 0 40px rgba(201,168,76,0.4));
+}
+.emblem-text{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;
+  animation:rotateSlow 60s linear infinite reverse;
+}
+.emblem-stars{
+  position:absolute;width:100%;height:100%;
+}
+.emblem-stars span{
+  position:absolute;font-size:0.8rem;color:var(--gold);opacity:0.4;
+}
+
+/* ===== FOUNDING SECTION ===== */
+#founding{
+  background:linear-gradient(135deg,var(--forest) 0%,var(--deep) 100%);
+  position:relative;overflow:hidden;
+}
+#founding::before{
+  content:'1947';position:absolute;right:-2rem;top:50%;transform:translateY(-50%);
+  font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;
+  color:rgba(201,168,76,0.03);line-height:1;pointer-events:none;
+}
+.founding-story{
+  max-width:800px;
+}
+.founding-story p{
+  font-family:'IM Fell English',serif;font-size:1.15rem;
+  color:rgba(255,255,255,0.7);line-height:1.9;margin-bottom:1.5rem;
+}
+.founding-story p:first-of-type::first-letter{
+  font-size:4rem;float:left;line-height:0.8;margin:0.1em 0.1em 0 0;
+  color:var(--gold);font-family:'Playfair Display',serif;font-weight:900;
+}
+.founding-quote{
+  border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:2.5rem 0;
+  background:rgba(201,168,76,0.05);border-radius:0 8px 8px 0;
+}
+.founding-quote p{
+  font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;
+  color:var(--gold3);margin:0 0 0.8rem;line-height:1.6;
+}
+.founding-quote cite{
+  font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:2px;
+  color:rgba(255,255,255,0.35);text-transform:uppercase;
+}
+
+.founding-timeline{
+  margin-top:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
+}
+.ft-item{
+  background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);
+  border-radius:8px;padding:1.2rem;text-align:center;
+  transition:all 0.3s;
+}
+.ft-item:hover{background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.4);}
+.ft-date{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);font-weight:700;}
+.ft-event{font-family:'Rajdhani',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-top:0.3rem;}
+
+/* ===== TIMELINE SECTION ===== */
+#timeline{background:var(--dark);}
+.timeline-wrap{position:relative;padding-left:3rem;}
+.timeline-line{
+  position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--gold),rgba(201,168,76,0.1));
+}
+.tl-entry{
+  position:relative;margin-bottom:3rem;padding-left:2.5rem;
+  opacity:0;transform:translateX(-20px);
+  transition:all 0.5s ease;
+}
+.tl-entry.visible{opacity:1;transform:translateX(0);}
+.tl-dot{
+  position:absolute;left:-3.45rem;top:0.3rem;
+  width:16px;height:16px;border-radius:50%;
+  background:var(--gold);border:3px solid var(--dark);
+  box-shadow:0 0 0 2px var(--gold),0 0 20px rgba(201,168,76,0.4);
+}
+.tl-dot.major{
+  width:20px;height:20px;left:-3.6rem;
+  background:var(--crimson);box-shadow:0 0 0 2px var(--crimson),0 0 20px rgba(139,21,21,0.5);
+}
+.tl-year-tag{
+  display:inline-flex;gap:0.8rem;align-items:center;margin-bottom:0.6rem;
+}
+.tl-year{
+  font-family:'Playfair Display',serif;font-size:0.95rem;
+  color:var(--gold);font-weight:700;
+}
+.tl-tag{
+  font-family:'Rajdhani',sans-serif;font-size:0.62rem;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;
+}
+.tl-tag.war{background:rgba(139,21,21,0.2);color:#e06060;border:1px solid rgba(139,21,21,0.4);}
+.tl-tag.op{background:rgba(30,82,40,0.2);color:var(--sage);border:1px solid rgba(30,82,40,0.4);}
+.tl-tag.found{background:rgba(201,168,76,0.15);color:var(--gold);border:1px solid rgba(201,168,76,0.3);}
+.tl-tag.peace{background:rgba(40,80,160,0.15);color:#7090e0;border:1px solid rgba(40,80,160,0.3);}
+.tl-tag.tragedy{background:rgba(80,20,20,0.3);color:#e08080;border:1px solid rgba(80,20,20,0.5);}
+.tl-tag.disaster{background:rgba(140,60,10,0.2);color:#e0a060;border:1px solid rgba(140,60,10,0.4);}
+.tl-box{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px;padding:1.4rem 1.6rem;
+}
+.tl-box:hover{border-color:rgba(201,168,76,0.25);background:rgba(201,168,76,0.04);}
+.tl-box h4{
+  font-family:'Playfair Display',serif;font-size:1.1rem;
+  color:var(--cream);margin-bottom:0.5rem;
+}
+.tl-box p{
+  font-size:0.95rem;color:rgba(255,255,255,0.5);line-height:1.7;
+}
+
+/* ===== WARS SECTION ===== */
+#wars{
+  background:linear-gradient(135deg,#0a0808 0%,#12100a 100%);
+  position:relative;overflow:hidden;
+}
+#wars::after{
+  content:'SHAHADAT';position:absolute;left:-2rem;bottom:-3rem;
+  font-family:'Playfair Display',serif;font-size:15rem;font-weight:900;
+  color:rgba(139,21,21,0.04);line-height:1;pointer-events:none;white-space:nowrap;
+}
+.wars-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.war-card{
+  border-radius:12px;overflow:hidden;position:relative;
+  border:1px solid rgba(139,21,21,0.25);
+  background:rgba(139,21,21,0.06);
+  transition:all 0.3s;
+}
+.war-card:hover{border-color:rgba(139,21,21,0.5);transform:translateY(-3px);}
+.war-header{
+  background:linear-gradient(135deg,rgba(139,21,21,0.4),rgba(100,15,15,0.2));
+  padding:1.4rem 1.6rem;display:flex;align-items:center;gap:1rem;
+  border-bottom:1px solid rgba(139,21,21,0.2);
+}
+.war-year-badge{
+  font-family:'Playfair Display',serif;font-size:1.4rem;
+  color:var(--crimson2);font-weight:900;min-width:80px;
+}
+.war-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);font-weight:700;}
+.war-sub{font-family:'Rajdhani',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.war-body{padding:1.4rem 1.6rem;}
+.war-body p{font-size:0.92rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:0.8rem;}
+.war-stats{display:flex;gap:1.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.06);}
+.ws{font-family:'Rajdhani',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;}
+.ws strong{display:block;font-size:1rem;color:var(--gold);margin-bottom:2px;font-family:'Playfair Display',serif;}
+
+/* ===== NISHAN-E-HAIDER ===== */
+#nishan{
+  background:linear-gradient(180deg,var(--dark) 0%,var(--forest) 50%,var(--dark) 100%);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.nishan-glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.nishan-intro{
+  max-width:700px;margin:0 auto 4rem;
+  font-size:1.1rem;color:rgba(255,255,255,0.5);line-height:1.8;
+}
+.nishan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;text-align:left;position:relative;z-index:2;}
+.nishan-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(201,168,76,0.2);
+  border-radius:12px;overflow:hidden;
+  transition:all 0.3s;
+}
+.nishan-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+.nc-banner{
+  background:linear-gradient(135deg,var(--forest),var(--pine));
+  padding:1.5rem;display:flex;align-items:center;gap:1rem;
+  border-bottom:1px solid rgba(201,168,76,0.15);
+}
+.nc-medal{
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--forest);
+  flex-shrink:0;border:2px solid rgba(255,255,255,0.2);
+}
+.nc-name{font-family:'Playfair Display',serif;font-size:0.88rem;color:#fff;font-weight:700;line-height:1.3;}
+.nc-rank{font-family:'Rajdhani',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+.nc-body{padding:1.2rem 1.4rem;}
+.nc-body p{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.65;}
+.nc-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.8rem;}
+.nct{font-family:'Rajdhani',sans-serif;font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;}
+.nct.war{background:rgba(139,21,21,0.15);color:#e06060;border:1px solid rgba(139,21,21,0.3);}
+.nct.post{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.25);}
+
+/* ===== SHUHADA SECTION ===== */
+#shuhada{background:var(--dark);}
+.shuhada-quote{
+  background:linear-gradient(135deg,rgba(139,21,21,0.15),rgba(30,82,40,0.1));
+  border-left:4px solid var(--gold);border-radius:0 12px 12px 0;
+  padding:2rem 2.5rem;margin-bottom:3rem;max-width:800px;
+}
+.shuhada-quote p{
+  font-family:'IM Fell English',serif;font-size:1.3rem;font-style:italic;
+  color:var(--gold3);line-height:1.7;margin-bottom:0.8rem;
+}
+.shuhada-quote cite{
+  font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:2px;
+  color:rgba(255,255,255,0.3);text-transform:uppercase;
+}
+.subsec{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:2.5rem 0 1.2rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.shaheed-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
+.shaheed-card{
+  background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px;padding:1rem;transition:all 0.3s;
+}
+.shaheed-card:hover{border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.05);}
+.sc-top{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.7rem;}
+.sc-av{
+  width:40px;height:40px;border-radius:50%;background:var(--pine);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:0.7rem;color:var(--gold);font-weight:700;
+  border:1.5px solid rgba(201,168,76,0.3);flex-shrink:0;
+}
+.sc-name{font-family:'Playfair Display',serif;font-size:0.75rem;color:var(--cream);font-weight:700;line-height:1.25;}
+.sc-rank{font-family:'Rajdhani',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;margin-top:1px;}
+.sc-detail{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;}
+.sc-award{display:inline-block;margin-top:0.6rem;font-family:'Rajdhani',sans-serif;font-size:0.58rem;font-weight:700;padding:2px 8px;border-radius:20px;background:rgba(201,168,76,0.1);color:var(--gold2);border:1px solid rgba(201,168,76,0.2);letter-spacing:0.5px;}
+
+/* ===== OPERATIONS SECTION ===== */
+#operations{background:linear-gradient(135deg,var(--forest) 0%,var(--dark) 100%);}
+.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.op-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(30,82,40,0.3);
+  border-radius:12px;padding:1.6rem;transition:all 0.3s;position:relative;overflow:hidden;
+}
+.op-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--sage));
+}
+.op-card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-3px);}
+.op-year{font-family:'Playfair Display',serif;font-size:0.85rem;color:var(--gold);font-weight:700;margin-bottom:0.3rem;}
+.op-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.op-urdu{font-size:0.8rem;color:rgba(255,255,255,0.25);margin-bottom:0.8rem;font-style:italic;}
+.op-desc{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.65;}
+.op-result{
+  margin-top:1rem;padding-top:0.8rem;border-top:1px solid rgba(255,255,255,0.05);
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;color:var(--sage);
+  letter-spacing:1px;text-transform:uppercase;
+}
+
+/* ===== CORPS SECTION ===== */
+#corps{background:var(--dark);}
+.corps-table{width:100%;border-collapse:collapse;}
+.corps-table thead tr{background:rgba(201,168,76,0.08);border-bottom:1px solid rgba(201,168,76,0.2);}
+.corps-table th{
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;letter-spacing:2px;
+  color:var(--gold);text-transform:uppercase;padding:1rem 1.2rem;text-align:left;font-weight:600;
+}
+.corps-table td{
+  padding:0.9rem 1.2rem;border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:0.88rem;color:rgba(255,255,255,0.55);vertical-align:middle;transition:all 0.2s;
+}
+.corps-table tbody tr:hover td{background:rgba(201,168,76,0.04);color:rgba(255,255,255,0.75);}
+.corps-num{font-family:'Playfair Display',serif;color:var(--gold);font-weight:700;font-size:0.95rem;}
+.corps-hq{font-weight:600;color:rgba(255,255,255,0.75);font-family:'Rajdhani',sans-serif;font-size:0.9rem;letter-spacing:0.5px;}
+.role-badge{
+  font-family:'Rajdhani',sans-serif;font-size:0.62rem;font-weight:700;
+  padding:3px 10px;border-radius:20px;background:rgba(30,82,40,0.2);
+  color:var(--sage);border:1px solid rgba(30,82,40,0.4);letter-spacing:0.5px;
+  white-space:nowrap;
+}
+
+/* ===== SPECIAL FORCES ===== */
+.sf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.sf-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:1.5rem;transition:all 0.3s;
+}
+.sf-card:hover{border-color:rgba(201,168,76,0.35);}
+.sf-badge{display:inline-block;margin-bottom:0.8rem;font-family:'Rajdhani',sans-serif;font-size:0.62rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;}
+.sf-badge.red{background:rgba(139,21,21,0.2);color:#e06060;border:1px solid rgba(139,21,21,0.35);}
+.sf-badge.gold{background:rgba(201,168,76,0.15);color:var(--gold2);border:1px solid rgba(201,168,76,0.3);}
+.sf-badge.green{background:rgba(30,82,40,0.2);color:var(--sage);border:1px solid rgba(30,82,40,0.4);}
+.sf-card h4{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);font-weight:700;margin-bottom:0.6rem;}
+.sf-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.65;}
+
+/* ===== MEDALS SECTION ===== */
+#medals{background:linear-gradient(135deg,var(--forest),var(--dark));}
+.medal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:2rem;}
+.medal-card{
+  display:flex;gap:1.2rem;align-items:flex-start;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.15);
+  border-radius:10px;padding:1.4rem;transition:all 0.3s;
+}
+.medal-card:hover{border-color:rgba(201,168,76,0.4);}
+.medal-icon-box{
+  width:54px;height:54px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+}
+.medal-icon-box.r1{background:linear-gradient(135deg,#c8a84b,#f5e0a0);box-shadow:0 0 20px rgba(200,168,75,0.35);}
+.medal-icon-box.r2{background:linear-gradient(135deg,#a0a0a0,#d8d8d8);}
+.medal-icon-box.r3{background:linear-gradient(135deg,#c8a84b,#e8b870);}
+.medal-icon-box.r4{background:linear-gradient(135deg,#1e5228,#3a7a4a);}
+.medal-icon-box.r5{background:linear-gradient(135deg,#1a3a8b,#2a5aab);}
+.medal-icon-box.r6{background:linear-gradient(135deg,#8b1515,#ab3a3a);}
+.medal-card h4{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--cream);font-weight:700;margin-bottom:0.2rem;}
+.medal-grade{font-family:'Rajdhani',sans-serif;font-size:0.62rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
+.medal-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.6;}
+
+/* ===== PEACEKEEPING ===== */
+#peacekeeping{background:var(--dark);}
+.pk-intro{
+  display:grid;grid-template-columns:2fr 1fr;gap:4rem;align-items:start;margin-bottom:3rem;
+}
+.pk-intro p{font-size:1.05rem;color:rgba(255,255,255,0.55);line-height:1.8;}
+.pk-bignum{text-align:center;}
+.pk-bignum .num{font-family:'Playfair Display',serif;font-size:5rem;color:var(--gold);font-weight:900;line-height:1;}
+.pk-bignum .lbl{font-family:'Rajdhani',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;}
+.pk-missions{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.pk-card{
+  background:rgba(40,80,160,0.06);border:1px solid rgba(40,80,160,0.2);
+  border-radius:10px;padding:1.3rem;transition:all 0.3s;
+}
+.pk-card:hover{border-color:rgba(40,80,160,0.5);}
+.pk-flag{font-size:1.5rem;margin-bottom:0.5rem;}
+.pk-card h4{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--cream);font-weight:700;margin-bottom:0.4rem;}
+.pk-card p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;}
+.pk-status{font-family:'Rajdhani',sans-serif;font-size:0.6rem;font-weight:700;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.5px;}
+.pk-status.active{background:rgba(30,150,80,0.2);color:#50d090;border:1px solid rgba(30,150,80,0.3);}
+.pk-status.completed{background:rgba(100,100,100,0.15);color:rgba(255,255,255,0.35);border:1px solid rgba(100,100,100,0.2);}
+
+/* ===== LEADERSHIP SECTION ===== */
+#leadership{background:linear-gradient(135deg,var(--forest),var(--dark));}
+.lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;}
+.lead-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.15);
+  border-radius:12px;overflow:hidden;transition:all 0.3s;
+}
+.lead-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-4px);}
+.lead-top{
+  background:linear-gradient(135deg,var(--forest),var(--pine));
+  padding:1.5rem;text-align:center;border-bottom:1px solid rgba(201,168,76,0.1);
+}
+.lead-avatar{
+  width:70px;height:70px;border-radius:50%;background:rgba(201,168,76,0.12);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 0.8rem;
+  font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);font-weight:700;
+  border:2px solid rgba(201,168,76,0.3);
+}
+.lead-name{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--cream);font-weight:700;}
+.lead-title{font-family:'Rajdhani',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+.lead-body{padding:1.2rem 1.4rem;}
+.lead-body p{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.6;}
+.lead-term{font-family:'Rajdhani',sans-serif;font-size:0.62rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-top:0.8rem;}
+
+.cmd-chart{
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);
+  border-radius:12px;padding:2rem;margin-top:2rem;
+}
+.cmd-chart h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold);margin-bottom:1.5rem;text-align:center;letter-spacing:1px;}
+.cmd-row{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:0.8rem;flex-wrap:wrap;}
+.cmd-box{
+  background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);
+  border-radius:6px;padding:0.5rem 1rem;
+  font-family:'Rajdhani',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.6);
+  letter-spacing:1px;text-align:center;text-transform:uppercase;
+}
+.cmd-box.top{background:rgba(201,168,76,0.2);color:var(--gold2);border-color:rgba(201,168,76,0.4);}
+.cmd-arrow{color:rgba(201,168,76,0.4);font-size:1rem;}
+
+/* ===== GEOGRAPHY SECTION ===== */
+#geography{background:var(--dark);}
+.geo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+.geo-card{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px;padding:1.3rem;text-align:center;transition:all 0.3s;
+}
+.geo-card:hover{border-color:rgba(201,168,76,0.3);}
+.geo-icon{font-size:2rem;margin-bottom:0.8rem;}
+.geo-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;color:var(--cream);font-weight:700;margin-bottom:0.5rem;}
+.geo-card p{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.6;}
+
+/* ===== MODERN SECTION ===== */
+#modern{background:linear-gradient(135deg,var(--deep) 0%,var(--dark) 100%);}
+.modern-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.modern-text h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--cream);font-weight:700;margin-bottom:1rem;}
+.modern-text p{font-size:0.95rem;color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:1rem;}
+.modern-list{list-style:none;margin-top:1.5rem;}
+.modern-list li{
+  display:flex;gap:1rem;align-items:flex-start;padding:0.8rem 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.88rem;color:rgba(255,255,255,0.5);
+}
+.modern-list li::before{content:'⬡';color:var(--gold);font-size:0.6rem;margin-top:4px;flex-shrink:0;}
+.tech-cards{display:grid;gap:1rem;}
+.tech-card{
+  background:rgba(30,82,40,0.08);border:1px solid rgba(30,82,40,0.25);
+  border-radius:10px;padding:1.2rem;display:flex;gap:1rem;align-items:flex-start;
+}
+.tech-icon{font-size:1.5rem;flex-shrink:0;}
+.tech-card h4{font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.tech-card p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.55;}
+
+/* ===== DISASTERS SECTION ===== */
+#disasters{background:var(--dark);}
+.disaster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.dis-card{
+  background:rgba(140,60,10,0.06);border:1px solid rgba(140,60,10,0.2);
+  border-radius:12px;padding:1.5rem;transition:all 0.3s;
+}
+.dis-card:hover{border-color:rgba(201,168,76,0.3);}
+.dis-year{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);font-weight:700;}
+.dis-name{font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream);margin:0.3rem 0 0.8rem;font-weight:700;}
+.dis-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.65;}
+.dis-scale{
+  margin-top:1rem;padding-top:0.8rem;border-top:1px solid rgba(255,255,255,0.05);
+  font-family:'Rajdhani',sans-serif;font-size:0.65rem;color:var(--sage);
+  letter-spacing:1px;text-transform:uppercase;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--forest);
+  border-top:1px solid rgba(201,168,76,0.15);
+  padding:4rem;text-align:center;
+}
+.footer-crescent{font-size:3rem;margin-bottom:1rem;filter:drop-shadow(0 0 20px rgba(201,168,76,0.3));}
+.footer-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);letter-spacing:3px;margin-bottom:0.5rem;}
+.footer-motto{font-family:'IM Fell English',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.35);margin-bottom:1.5rem;}
+.footer-line{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem auto;}
+.footer-meta{font-family:'Rajdhani',sans-serif;font-size:0.65rem;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .wars-grid,.nishan-grid,.ops-grid,.shaheed-grid,.sf-grid,.lead-grid,.modern-grid,.overview-grid{grid-template-columns:1fr;}
+  .medal-grid,.pk-missions,.geo-grid{grid-template-columns:1fr 1fr;}
+  nav .nav-links{display:none;}
+  .container{padding:0 1.5rem;}
+  .pk-intro{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <span class="star">☪</span>
+    KNOW ABOUT PAKISTAN
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#timeline">History</a>
+    <a href="#wars">Wars</a>
+    <a href="#nishan">Heroes</a>
+    <a href="#operations">Operations</a>
+    <a href="#corps">Structure</a>
+    <a href="#medals">Honours</a>
+    <a href="#modern">Modern Era</a>
+  </div>
+  <div class="nav-badge">Est. 14 Aug 1947</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Pakistan Armed Forces — Ground Force</div>
+    <div class="hero-crescent">☪</div>
+    <div class="hero-title">Pakistan <span>Army</span></div>
+    <div class="hero-urdu">پاک فوج — ایمان، تقویٰ، جہاد فی سبیل اللہ</div>
+    <div class="hero-line"></div>
+    <div class="hero-desc">From the blood-soaked plains of Partition to the frozen heights of Siachen — seventy-eight years of sacrifice, honour, and unwavering service to the nation.</div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num">650K+</div><div class="hstat-label">Active Personnel</div></div>
+      <div class="hstat"><div class="hstat-num">78</div><div class="hstat-label">Years of Service</div></div>
+      <div class="hstat"><div class="hstat-num">45+</div><div class="hstat-label">UN Missions</div></div>
+      <div class="hstat"><div class="hstat-num">6</div><div class="hstat-label">Nishan-e-Haider</div></div>
+      <div class="hstat"><div class="hstat-num">200K+</div><div class="hstat-label">Shuhada</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div></div></div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-text">
+        <div class="sec-label">The Institution</div>
+        <h2 class="sec-title">Pakistan's <em>Bedrock</em> Defence Force</h2>
+        <p>The Pakistan Army is the land-based branch of the Pakistan Armed Forces. It is the world's sixth-largest army by active military personnel, with over 650,000 active soldiers and more than 500,000 reserve personnel as of 2026.</p>
+        <p>Founded on 14 August 1947 simultaneously with the independence of Pakistan, the army inherited approximately one-third of the British Indian Army's assets, regiments, and manpower. British officers served in senior positions through the transition period, with General Sir Frank Messervy serving as the first Commander-in-Chief.</p>
+        <p>The army is headquartered at General Headquarters (GHQ) in Rawalpindi, Punjab. The Supreme Commander of the Pakistan Army is constitutionally the President of Pakistan, while operational command rests with the Chief of Army Staff (COAS), currently a four-star General.</p>
+        <p>The army's motto — <em>"Iman, Taqwa, Jihad fi Sabilillah"</em> (Faith, Piety, Holy War in the Path of Allah) — reflects the spiritual and professional values that define the institution.</p>
+        <div class="overview-facts">
+          <div class="fact-box"><h4>GHQ</h4><p>Rawalpindi, Punjab</p></div>
+          <div class="fact-box"><h4>1947</h4><p>Year of Founding</p></div>
+          <div class="fact-box"><h4>9 Corps</h4><p>Operational Structure</p></div>
+          <div class="fact-box"><h4>6th</h4><p>Largest Army Globally</p></div>
+          <div class="fact-box"><h4>Nuclear</h4><p>Strategic Deterrent</p></div>
+          <div class="fact-box"><h4>≈$9B</h4><p>Annual Defence Budget</p></div>
+        </div>
+      </div>
+      <div class="emblem-display">
+        <div class="emblem-ring">
+          <div class="emblem-inner">☪</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING -->
+<section id="founding">
+  <div class="container">
+    <div class="sec-label">The Beginning</div>
+    <h2 class="sec-title">14 August <em>1947</em></h2>
+    <div class="founding-story">
+      <p>When the British Raj ended on the midnight of 14 August 1947, two nations were born from the crucible of Partition. Amidst the largest human migration in history — 10 to 20 million people displaced, over one million killed — the Pakistan Army came into existence from nothing. It was not handed an army; it had to build one while simultaneously fighting its first war.</p>
+      <p>The division of the British Indian Army was brutal and hasty. Pakistan received approximately 30% of the assets — six armoured regiments, eight artillery regiments, and roughly 140,000 troops. Much of the heavy equipment, ammunition, and supplies was delayed or outright denied. Senior officers, largely British, were serving on borrowed time. Regiments were split overnight along religious lines, with Muslim soldiers reporting to Pakistan and Hindu/Sikh soldiers to India.</p>
+      <div class="founding-quote">
+        <p>"Pakistan comes into being in the most difficult circumstances. The army is our first shield. It must be ready to defend every inch of this new nation."</p>
+        <cite>— Quaid-e-Azam Muhammad Ali Jinnah, August 1947</cite>
+      </div>
+      <p>Within weeks of independence, Pakistani and Indian forces clashed in Kashmir. Captain Muhammad Sarwar of the Punjab Regiment became the first Pakistani soldier to earn the Nishan-e-Haider — and the first to die in the service of the new nation. The army was already being forged in fire before it had even fully formed its own identity.</p>
+    </div>
+    <div class="founding-timeline">
+      <div class="ft-item"><div class="ft-date">14 Aug 1947</div><div class="ft-event">Army Founded</div></div>
+      <div class="ft-item"><div class="ft-date">Oct 1947</div><div class="ft-event">First Kashmir War</div></div>
+      <div class="ft-item"><div class="ft-date">1948</div><div class="ft-event">First Nishan-e-Haider</div></div>
+      <div class="ft-item"><div class="ft-date">1951</div><div class="ft-event">First Pakistani COAS: Gen Ayub Khan</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="container">
+    <div class="sec-label">Historical Record</div>
+    <h2 class="sec-title">1947 to <em>2026</em></h2>
+    <p class="sec-desc">Seven decades of service, war, sacrifice, and evolution. Every chapter written in the blood of those who answered the call.</p>
+    <div class="timeline-wrap">
+      <div class="timeline-line"></div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">14 Aug 1947</span><span class="tl-tag found">Foundation</span></div>
+        <div class="tl-box"><h4>Pakistan Army Founded</h4><p>Created from division of British Indian Army. Initial strength ~150,000 troops with British officers in senior positions. General Sir Frank Messervy appointed first Commander-in-Chief. Army inherits about 30% of British Indian Army assets amidst the chaos of Partition.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">Oct 1947 – Jan 1949</span><span class="tl-tag war">War</span></div>
+        <div class="tl-box"><h4>First Kashmir War (1947–48)</h4><p>Pakistan Army's baptism by fire. Deployed to support Kashmiri fighters against Indian forces. Captain Muhammad Sarwar earns — and dies for — the first Nishan-e-Haider. UN-brokered ceasefire in January 1949 establishes the Line of Control that exists to this day.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1951</span><span class="tl-tag found">Milestone</span></div>
+        <div class="tl-box"><h4>First Pakistani Commander-in-Chief</h4><p>General Ayub Khan becomes the first Pakistani-born Commander-in-Chief, ending British command of the army. A historic transition marking the full indigenisation of the officer corps.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1954</span><span class="tl-tag peace">Alliance</span></div>
+        <div class="tl-box"><h4>SEATO & CENTO Membership</h4><p>Pakistan joins the Southeast Asia Treaty Organization and later the Central Treaty Organization (Baghdad Pact), aligning with the Western bloc during the Cold War. U.S. military aid begins flowing to modernize the army's equipment and training.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1956</span><span class="tl-tag found">Elite</span></div>
+        <div class="tl-box"><h4>SSG Founded — Special Services Group</h4><p>Pakistan establishes its elite special operations force modeled partly on the U.S. Special Forces. The SSG — known as the "Black Storks" for their distinctive berets — would go on to conduct some of Pakistan's most sensitive military operations across seven decades.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">Sep 1965</span><span class="tl-tag war">War</span></div>
+        <div class="tl-box"><h4>Second Indo-Pakistan War — The 17-Day War</h4><p>Operation Grand Slam attempts to cut off Indian supply lines to Kashmir. The Battle of Lahore and the Battle of Chawinda — one of the largest tank engagements since WWII — define this conflict. Pakistan deploys Patton tanks against Indian Centurions. Despite tactical successes, UN ceasefire ends the war. Two Nishan-e-Haider awarded posthumously. Indian forces halted at the outskirts of Lahore.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">1971</span><span class="tl-tag war">War</span></div>
+        <div class="tl-box"><h4>Bangladesh Liberation War — The Great Tragedy</h4><p>The darkest chapter. East Pakistan separates to become Bangladesh following Indian military intervention and civil war. The Pakistan Army fights on two fronts — both East and West — and suffers its greatest defeat. 93,000 Pakistani troops surrender in Dhaka on 16 December 1971. Three Nishan-e-Haider awarded. The army undergoes sweeping reforms under Z.A. Bhutto's government, including reduction in political power.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1974</span><span class="tl-tag found">Nuclear</span></div>
+        <div class="tl-box"><h4>Nuclear Programme Begins</h4><p>Following India's 1974 nuclear test, Pakistan accelerates its own nuclear weapons programme. The army's Strategic Plans Division is later established to manage the nuclear arsenal, delivery systems, and command structure under the National Command Authority.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1979–1989</span><span class="tl-tag op">Cold War</span></div>
+        <div class="tl-box"><h4>Afghan-Soviet War — ISI & Mujahideen</h4><p>Pakistan Army and ISI coordinate with the CIA to arm and train Afghan Mujahideen fighting Soviet forces in Afghanistan. The Peshawar-based operation becomes one of the largest covert military operations in Cold War history. Pakistan becomes a frontline state, receiving billions in U.S. military aid. The war fundamentally reshapes the region's geopolitics and seeds future insurgency problems.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1984–Present</span><span class="tl-tag war">Siachen</span></div>
+        <div class="tl-box"><h4>Siachen Conflict — World's Highest Battlefield</h4><p>India's Operation Meghdoot in April 1984 seizes positions on the Siachen Glacier before Pakistan can act. Pakistan Army deploys Northern Light Infantry and SSG to establish and hold posts at altitudes above 6,000m. Temperatures drop to -60°C. More casualties from weather than combat. The 2012 Gayari avalanche kills 138 Pakistani soldiers in a single moment. The conflict continues with no formal resolution.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">1989–2005</span><span class="tl-tag peace">Peacekeeping</span></div>
+        <div class="tl-box"><h4>UN Peacekeeping Era — Global Deployment</h4><p>Pakistan dramatically expands UN peacekeeping contributions. Deployments to Somalia (UNOSOM), Rwanda, Bosnia (UNPROFOR), Sierra Leone, Liberia, Sudan, Haiti, and Congo. By 2000, Pakistan becomes the world's largest troop-contributing nation to UN peacekeeping missions — a distinction it holds for over a decade.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">May 1998</span><span class="tl-tag found">Nuclear</span></div>
+        <div class="tl-box"><h4>Nuclear Tests — Chagai</h4><p>Pakistan conducts five nuclear tests at Chagai in Balochistan on 28 May 1998, in response to India's Pokhran-II tests. A sixth test is conducted on 30 May. Pakistan becomes the world's seventh declared nuclear state. The Strategic Plans Division assumes formal responsibility for nuclear assets and doctrine.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">May–Jul 1999</span><span class="tl-tag war">War</span></div>
+        <div class="tl-box"><h4>Kargil War — Operation Badr</h4><p>Pakistani regular forces and Mujahideen infiltrate positions overlooking the Kargil-Leh highway in Indian-administered Kashmir during winter. Intense fighting at altitudes of 5,000m+. India launches massive counter-offensive using air power. International pressure — including from the U.S. — leads to Pakistani withdrawal after approximately 11 weeks. The conflict brings two nuclear states to the brink of full war.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">2001</span><span class="tl-tag op">Turning Point</span></div>
+        <div class="tl-box"><h4>Post-9/11 Pivot — War on Terror</h4><p>Following 9/11, Pakistan under General Pervez Musharraf reverses its Taliban-support policy and joins the U.S.-led coalition. The army pivots from an India-centric conventional posture to counter-insurgency in the tribal belt. A decade of internal conflict begins as former Afghan jihad allies become Pakistan's enemies.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">2004–2008</span><span class="tl-tag op">Operation</span></div>
+        <div class="tl-box"><h4>Operations in FATA — Waziristan</h4><p>Operation Zalzala in South Waziristan; operations in the Bajaur, Mohmand, and Khyber agencies. The army suffers significant losses in unfamiliar counter-insurgency terrain. Suicide bombings begin targeting military installations, mosques, and markets across Pakistan.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot disaster"></div>
+        <div class="tl-year-tag"><span class="tl-year">Oct 2005</span><span class="tl-tag disaster">Disaster</span></div>
+        <div class="tl-box"><h4>Kashmir Earthquake — 87,000 Dead</h4><p>A 7.6 magnitude earthquake devastates AJK and KPK. 87,000 killed, 3.5 million homeless as winter approaches. The Pakistan Army becomes the primary relief and rescue force, deploying 100,000+ troops, engineers, and medics. A massive international relief operation is coordinated through army logistics. The army's performance earns international praise.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">2009</span><span class="tl-tag op">Operation</span></div>
+        <div class="tl-box"><h4>Operation Rah-e-Rast — Reclaiming Swat</h4><p>Pakistan's largest military operation at that time. 30,000+ troops deployed to clear the Swat Valley of TTP (Tehrik-e-Taliban Pakistan). 2 million civilians displaced as army systematically retakes every village and mountain post. By September 2009, civilian administration restored. A landmark in Pakistan's counter-insurgency capability.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">2010</span><span class="tl-tag disaster">Disaster</span></div>
+        <div class="tl-box"><h4>Catastrophic Floods — 20 Million Affected</h4><p>The worst floods in Pakistan's recorded history inundate one-fifth of the country. Pakistan Army deploys 170,000 troops and rescues over 500,000 people in the largest civil-military relief operation in the country's history. Army engineers build 278 bridges and restore 8,000km of roads.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">Jun 2014</span><span class="tl-tag op">Operation</span></div>
+        <div class="tl-box"><h4>Operation Zarb-e-Azb — The Decisive Strike</h4><p>Pakistan's largest ever military offensive. 30,000+ troops enter North Waziristan — Pakistan's most lawless tribal region and a sanctuary for TTP, Haqqani Network, Al-Qaeda, IMU, and affiliated groups. Hundreds of militant tunnels, weapon caches, and command centres destroyed. The operation clears the entire tribal region and kills over 3,400 militants, though many escape into Afghanistan. One of the most significant counter-insurgency successes in Pakistan's history.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">16 Dec 2014</span><span class="tl-tag tragedy">Tragedy</span></div>
+        <div class="tl-box"><h4>APS Peshawar Massacre — 132 Children Martyred</h4><p>TTP militants attack Army Public School Peshawar, killing 132 schoolchildren and 17 staff in the deadliest terrorist attack in Pakistan's history. The nation mourns in unity. Army reacts by intensifying operations, launching the National Action Plan, and abolishing the moratorium on the death penalty for terrorism. The APS attack becomes the turning point that galvanises public and political support for a full military campaign against the Taliban.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">2015</span><span class="tl-tag op">Formation</span></div>
+        <div class="tl-box"><h4>Special Security Division — CPEC Protection</h4><p>A dedicated military formation of 15,000+ troops established to guard China-Pakistan Economic Corridor (CPEC) projects, workers, and infrastructure across all four provinces. As CPEC investment reaches $65+ billion, the SSD becomes one of the army's most critical new roles.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">2017–Present</span><span class="tl-tag op">Operation</span></div>
+        <div class="tl-box"><h4>Operation Radd-ul-Fasaad — Eliminating the Remnants</h4><p>Nationwide counter-terrorism operation targeting sleeper cells, weapons caches, and terrorist networks. Conducted in collaboration with intelligence agencies, law enforcement, and paramilitary forces. By 2024, over 58,000 intelligence-based operations conducted across Pakistan, drastically reducing major attacks.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot disaster"></div>
+        <div class="tl-year-tag"><span class="tl-year">2022</span><span class="tl-tag disaster">Disaster</span></div>
+        <div class="tl-box"><h4>Super Floods 2022 — One-Third of Pakistan Submerged</h4><p>Unprecedented monsoon floods affect 33 million people and submerge one-third of Pakistan. The army deploys in the largest civil emergency response in its history — 177,000 troops, 50+ helicopters, and 1,200 boats rescue over 900,000 stranded civilians. Army engineers work continuously for months rebuilding infrastructure.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot major"></div>
+        <div class="tl-year-tag"><span class="tl-year">2022–Present</span><span class="tl-tag op">Operation</span></div>
+        <div class="tl-box"><h4>Operation Azm-e-Istehkam — Renewed Resolve</h4><p>Large-scale counter-insurgency operations in KPK and Balochistan targeting resurgent TTP elements following the 2021 U.S. withdrawal from Afghanistan. Simultaneous focus on CPEC security, border fencing with Afghanistan (over 2,600km of fence completed), and economic zone protection. Operations continue as of April 2026.</p></div>
+      </div>
+
+      <div class="tl-entry visible">
+        <div class="tl-dot"></div>
+        <div class="tl-year-tag"><span class="tl-year">2024–2026</span><span class="tl-tag op">Current</span></div>
+        <div class="tl-box"><h4>Present Day — Multi-Front Engagement</h4><p>As of April 2026, the Pakistan Army is simultaneously managing counter-terrorism in KPK and Balochistan under Operation Azm-e-Istehkam, maintaining LoC vigilance against India, guarding CPEC infrastructure, participating in 4 active UN peacekeeping missions, and conducting humanitarian operations following flash floods in Northern Pakistan (early 2026). Modernisation continues with induction of new armoured vehicles, drones, and air defence systems.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WARS -->
+<section id="wars">
+  <div class="container">
+    <div class="sec-label">On the Battlefield</div>
+    <h2 class="sec-title">Wars &amp; <em>Conflicts</em></h2>
+    <p class="sec-desc">From the chaos of 1947 to the frozen peaks of Kargil — Pakistan Army's chronicle of combat.</p>
+    <div class="wars-grid">
+      <div class="war-card">
+        <div class="war-header">
+          <div class="war-year-badge">1947</div>
+          <div><div class="war-title">First Kashmir War</div><div class="war-sub">October 1947 – January 1949</div></div>
+        </div>
+        <div class="war-body">
+          <p>Pakistan's first war, fought within weeks of independence. Tribal fighters supported by regular army units entered Kashmir to prevent its accession to India. The Battle of Bunji, the defence of Skardu, and the attack on Tithwal were key engagements. UN-brokered ceasefire created the Line of Control.</p>
+          <p>Captain Muhammad Sarwar of the Punjab Regiment became the first recipient and martyr of the Nishan-e-Haider, single-handedly clearing enemy bunkers near Tithwal on 27 July 1948.</p>
+          <div class="war-stats">
+            <div class="ws"><strong>1</strong>Nishan-e-Haider</div>
+            <div class="ws"><strong>1948</strong>UN Ceasefire</div>
+            <div class="ws"><strong>LoC</strong>Created</div>
+          </div>
+        </div>
+      </div>
+      <div class="war-card">
+        <div class="war-header">
+          <div class="war-year-badge">1965</div>
+          <div><div class="war-title">Second Indo-Pakistan War</div><div class="war-sub">6–23 September 1965</div></div>
+        </div>
+        <div class="war-body">
+          <p>The 17-day war that shaped the army's identity. Operation Grand Slam aimed to cut Indian supply lines; the Battle of Chawinda became one of the largest tank battles since WWII, involving over 600 tanks. Indian forces advanced to the outskirts of Lahore before being halted. Major Raja Aziz Bhatti held the BRB Canal line for four days and nights before being martyred.</p>
+          <div class="war-stats">
+            <div class="ws"><strong>2</strong>Nishan-e-Haider</div>
+            <div class="ws"><strong>17 Days</strong>Duration</div>
+            <div class="ws"><strong>600+</strong>Tanks Engaged</div>
+          </div>
+        </div>
+      </div>
+      <div class="war-card">
+        <div class="war-header">
+          <div class="war-year-badge">1971</div>
+          <div><div class="war-title">Bangladesh Liberation War</div><div class="war-sub">March – 16 December 1971</div></div>
+        </div>
+        <div class="war-body">
+          <p>Pakistan's most painful chapter. Civil war in East Pakistan led to Indian military intervention on 3 December. Fighting on two fronts simultaneously — East and West. The fall of Dhaka on 16 December saw 93,000 Pakistani troops surrender in the largest military surrender since WWII. Three Nishan-e-Haider were awarded. The loss led to sweeping military and political reforms.</p>
+          <div class="war-stats">
+            <div class="ws"><strong>3</strong>Nishan-e-Haider</div>
+            <div class="ws"><strong>93,000</strong>POWs</div>
+            <div class="ws"><strong>16 Dec</strong>Surrender</div>
+          </div>
+        </div>
+      </div>
+      <div class="war-card">
+        <div class="war-header">
+          <div class="war-year-badge">1999</div>
+          <div><div class="war-title">Kargil War</div><div class="war-sub">May – July 1999</div></div>
+        </div>
+        <div class="war-body">
+          <p>Pakistani forces occupied commanding heights in the Kargil sector during winter. India responded with massive air and ground assaults. The war saw the first use of air power against ground positions along the LoC. International pressure — especially from the U.S. — led to withdrawal. The conflict marked the first conventional war between two nuclear-armed states and remains the world's highest-altitude military conflict.</p>
+          <div class="war-stats">
+            <div class="ws"><strong>5,000m</strong>Altitude</div>
+            <div class="ws"><strong>11 Weeks</strong>Duration</div>
+            <div class="ws"><strong>Nuclear</strong>Both Sides</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NISHAN-E-HAIDER -->
+<section id="nishan">
+  <div class="nishan-glow"></div>
+  <div class="container">
+    <div class="sec-label" style="justify-content:center;">Pakistan's Highest Honour</div>
+    <h2 class="sec-title" style="text-align:center;">Nishan-e-Haider <em>☪</em></h2>
+    <div class="nishan-intro">
+      The Nishan-e-Haider (نشان حیدر) — "Sign of Haider Ali" — is Pakistan's highest and most sacred military award. Equivalent to the British Victoria Cross or the American Medal of Honor, it has been awarded only six times since Pakistan's founding in 1947. Every recipient died earning it. Every one was awarded posthumously. Their names are inscribed at GHQ Rawalpindi, and their regiments carry the honour for eternity.
+    </div>
+    <div class="nishan-grid">
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">MS</div>
+          <div><div class="nc-name">Captain Muhammad Sarwar Shaheed</div><div class="nc-rank">Punjab Regiment · 1948</div></div>
+        </div>
+        <div class="nc-body">
+          <p>First recipient and first martyr. During the 1947–48 Kashmir War at Tithwal, he single-handedly attacked and destroyed enemy bunkers under heavy fire. He cut the fuse wire of a booby trap to allow his men to advance, sacrificing his life in the act. Martyred 27 July 1948, age 35.</p>
+          <div class="nc-tags"><span class="nct war">Kashmir War 1948</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">AB</div>
+          <div><div class="nc-name">Major Raja Aziz Bhatti Shaheed</div><div class="nc-rank">Punjab Regiment · 1965</div></div>
+        </div>
+        <div class="nc-body">
+          <p>During the 1965 war, held a vital post at BRB Canal near Lahore against repeated Indian armoured assaults for four consecutive days and nights without rest. Refused all orders to withdraw. Continued directing defensive fire until martyred on 10 September 1965, age 36.</p>
+          <div class="nc-tags"><span class="nct war">1965 War</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">MM</div>
+          <div><div class="nc-name">Lance Naik Muhammad Mahfuz Shaheed</div><div class="nc-rank">Punjab Regiment · 1965</div></div>
+        </div>
+        <div class="nc-body">
+          <p>Near Ferozepur in 1965, single-handedly attacked a machine gun nest pinning down his entire company. He captured the post under direct fire and was mortally wounded in the process, allowing his platoon to advance and complete the objective. Martyred 6 September 1965.</p>
+          <div class="nc-tags"><span class="nct war">1965 War</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">SS</div>
+          <div><div class="nc-name">Major Shabbir Sharif Shaheed</div><div class="nc-rank">Frontier Force Regiment · 1971</div></div>
+        </div>
+        <div class="nc-body">
+          <p>During the 1971 war near Sulemanki on the Rajasthan front, led a bayonet charge against vastly superior enemy forces. Personally destroyed multiple enemy tanks. Continued fighting despite severe wounds, rallying his men until he fell. Martyred 6 December 1971. Brother of the later Prime Minister Nawaz Sharif.</p>
+          <div class="nc-tags"><span class="nct war">1971 War</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">RM</div>
+          <div><div class="nc-name">Pilot Officer Rashid Minhas Shaheed</div><div class="nc-rank">Pakistan Air Force · 1971</div></div>
+        </div>
+        <div class="nc-body">
+          <p>Though from the Air Force (Pakistan's only PAF recipient), when his instructor attempted to defect to India mid-flight, Rashid wrestled for control of the aircraft. Rather than allow a Pakistani military jet to reach enemy hands, he deliberately crashed it in Pakistani territory. Martyred 20 August 1971, aged just 20 years old.</p>
+          <div class="nc-tags"><span class="nct war">1971 War · PAF</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+      <div class="nishan-card">
+        <div class="nc-banner">
+          <div class="nc-medal">MH</div>
+          <div><div class="nc-name">Havildar Muhammad Hussain Shaheed</div><div class="nc-rank">Azad Kashmir Regiment · 1971</div></div>
+        </div>
+        <div class="nc-body">
+          <p>Near Charwa during the 1971 war, when the enemy threatened to overrun his position, he grabbed a machine gun and charged directly into the advancing enemy force alone. His extraordinary act broke the enemy assault completely and saved his entire company. Martyred 10 December 1971.</p>
+          <div class="nc-tags"><span class="nct war">1971 War</span><span class="nct post">Posthumous</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHUHADA -->
+<section id="shuhada">
+  <div class="container">
+    <div class="sec-label">In Eternal Memory</div>
+    <h2 class="sec-title">Shuhada — <em>The Martyrs</em></h2>
+    <div class="shuhada-quote">
+      <p>"Tell them that the soil of Pakistan was watered by our blood. Tell them we did not falter."</p>
+      <cite>— Inscription, Yadgar-e-Shuhada, GHQ Rawalpindi</cite>
+    </div>
+
+    <div class="subsec">Hilal-e-Jurat Recipients — Crescent of Courage</div>
+    <div class="shaheed-grid">
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">AR</div><div><div class="sc-name">Brigadier Abdul Rahman</div><div class="sc-rank">Armoured Corps · 1965</div></div></div><div class="sc-detail">Led his armoured brigade at the Battle of Chawinda — one of the largest tank engagements since WWII. Killed while commanding from the forward line.</div><div class="sc-award">Hilal-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">MA</div><div><div class="sc-name">Major Muhammad Akram</div><div class="sc-rank">SSG · 1971</div></div></div><div class="sc-detail">Led a deep-penetration SSG night raid behind enemy lines in East Pakistan, disrupting major supply routes before being encircled and martyred.</div><div class="sc-award">Hilal-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">SA</div><div><div class="sc-name">Colonel Sher Ali</div><div class="sc-rank">Sindh Regiment · 1965</div></div></div><div class="sc-detail">Held the Lahore sector defensive line for 72 hours against a numerically superior force. Refused evacuation. Died at his command post.</div><div class="sc-award">Hilal-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">IB</div><div><div class="sc-name">Captain Iftikhar Baig</div><div class="sc-rank">SSG · 2009</div></div></div><div class="sc-detail">Martyred during Operation Rah-e-Rast in Swat while leading a commando strike on a militant command centre in the Peochar valley.</div><div class="sc-award">Hilal-e-Jurat</div></div>
+    </div>
+
+    <div class="subsec">Sitara-e-Jurat Recipients — Star of Courage</div>
+    <div class="shaheed-grid">
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">MN</div><div><div class="sc-name">Major Muhammad Nawaz</div><div class="sc-rank">SSG · 2014</div></div></div><div class="sc-detail">Led a commando assault in North Waziristan during Zarb-e-Azb. Martyred rescuing wounded soldiers under heavy fire.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">AK</div><div><div class="sc-name">Captain Arslan Khan</div><div class="sc-rank">Frontier Force · 2017</div></div></div><div class="sc-detail">Killed during Operation Radd-ul-Fasaad clearing a compound in Khyber Agency. Drew enemy fire onto himself to save two soldiers.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">FQ</div><div><div class="sc-name">Captain Faisal Qureshi</div><div class="sc-rank">Engineers · 2010</div></div></div><div class="sc-detail">Martyred defusing a complex IED in Mardan. Worked alone after EOD robot failed — gave his life to save a school full of children.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">RA</div><div><div class="sc-name">Nb. Sub. Raheem Ali</div><div class="sc-rank">Punjab Regiment · 2022</div></div></div><div class="sc-detail">Charged an ambush line alone in South Waziristan to create a gap for his platoon to withdraw. Martyred on the spot.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">ZH</div><div><div class="sc-name">Major Zeeshan Hamid</div><div class="sc-rank">Baloch Regiment · 2016</div></div></div><div class="sc-detail">Intercepted and neutralised a suicide vest team outside Quetta before they could reach a military installation. Martyred in the engagement.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">NA</div><div><div class="sc-name">Captain Noman Akbar</div><div class="sc-rank">Sindh Regiment · 2020</div></div></div><div class="sc-detail">Voluntarily took the point position in North Waziristan to shield his troops when an IED field was reported ahead. Martyred on point.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">HR</div><div><div class="sc-name">Havildar Hamid Raza</div><div class="sc-rank">AK Regiment · 2019</div></div></div><div class="sc-detail">Shielded his section commander and two wounded soldiers from a flanking attack in Mohmand tribal district with his own body.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">KA</div><div><div class="sc-name">Subedar Khalid Ahmed</div><div class="sc-rank">Frontier Force · 2021</div></div></div><div class="sc-detail">Held a Kurram district checkpost for hours with a small garrison against a large militant force until reinforcements arrived. Killed in the final assault.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+    </div>
+
+    <div class="subsec">APS Peshawar — 16 December 2014</div>
+    <div class="shaheed-grid">
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">MZ</div><div><div class="sc-name">Major Zahid Mehmood</div><div class="sc-rank">Rapid Response · 2014</div></div></div><div class="sc-detail">Among the first to breach the APS compound. Martyred while evacuating students from the gymnasium under direct fire.</div><div class="sc-award">Hilal-e-Shujaat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">TK</div><div><div class="sc-name">Captain Taimur Khan</div><div class="sc-rank">SSG · 2014</div></div></div><div class="sc-detail">Cleared the APS auditorium. Killed by a suicide bomber while shielding students hiding behind stage curtains from the blast.</div><div class="sc-award">Sitara-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">AQ</div><div><div class="sc-name">Havildar Adnan Qureshi</div><div class="sc-rank">SSG · 2014</div></div></div><div class="sc-detail">Martyred while tackling an armed attacker in a corridor, allowing 40+ students to escape through a rear exit.</div><div class="sc-award">Tamgha-e-Jurat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">SW</div><div><div class="sc-name">Sepoy Waseem Shah</div><div class="sc-rank">Rapid Response · 2014</div></div></div><div class="sc-detail">Youngest soldier martyred at APS. Joined the rescue voluntarily. Killed shielding children while directing them to the evacuation zone.</div><div class="sc-award">Tamgha-e-Shujaat</div></div>
+    </div>
+
+    <div class="subsec">Siachen Glacier — World's Highest Battlefield</div>
+    <div class="shaheed-grid">
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">GS</div><div><div class="sc-name">LNk. Ghulam Sarwar</div><div class="sc-rank">NLI · 2012</div></div></div><div class="sc-detail">One of 138 soldiers lost in the 2012 Gayari avalanche — the single worst disaster in Pakistan Army history. Maintained his post at 5,400m until the mountain took him.</div><div class="sc-award">Siachen Service Medal</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">JK</div><div><div class="sc-name">Sepoy Jameel Khan</div><div class="sc-rank">NLI · 2016</div></div></div><div class="sc-detail">Killed by frostbite and hypoxia complications while carrying supplies to a forward post cut off by blizzard. Refused to abandon the resupply mission.</div><div class="sc-award">Siachen Service Medal</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">SM</div><div><div class="sc-name">Captain Shahbaz Malik</div><div class="sc-rank">NLI · 2018</div></div></div><div class="sc-detail">Martyred when a crevasse collapsed during a glacier reconnaissance patrol. Saved two soldiers by securing their ropes before the ice gave way beneath him.</div><div class="sc-award">Sitara-e-Shujaat</div></div>
+      <div class="shaheed-card"><div class="sc-top"><div class="sc-av">RK</div><div><div class="sc-name">Havildar Rashid Karim</div><div class="sc-rank">NLI · 2015</div></div></div><div class="sc-detail">Gave his life guiding a medical helicopter to a stranded soldier's position on the glacier in complete white-out conditions during the 2015 blizzard season.</div><div class="sc-award">Sitara-e-Basalat</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATIONS -->
+<section id="operations">
+  <div class="container">
+    <div class="sec-label">Counter-Insurgency</div>
+    <h2 class="sec-title">Major <em>Operations</em></h2>
+    <p class="sec-desc">From clearing the tribal belt to protecting CPEC — Pakistan Army's operational record in the War on Terror era.</p>
+    <div class="ops-grid">
+      <div class="op-card">
+        <div class="op-year">2004–2008</div>
+        <div class="op-name">Operations in FATA</div>
+        <div class="op-urdu">Waziristan, Bajaur, Mohmand, Khyber</div>
+        <div class="op-desc">First generation of counter-insurgency operations against TTP and Al-Qaeda-affiliated groups in the Federally Administered Tribal Areas. Included Operation Zalzala (South Waziristan), Operation Sher Dil (Bajaur), and multiple Khyber operations.</div>
+        <div class="op-result">✓ Initial militant sanctuaries disrupted</div>
+      </div>
+      <div class="op-card">
+        <div class="op-year">2009</div>
+        <div class="op-name">Operation Rah-e-Rast</div>
+        <div class="op-urdu">راہِ راست — The Right Path</div>
+        <div class="op-desc">Pakistan's largest single military operation at the time. 30,000+ troops deployed to clear Swat Valley of TTP. 2 million civilians displaced. The valley was recaptured systematically, village by village, and civilian administration fully restored by September 2009.</div>
+        <div class="op-result">✓ Swat fully restored — 2M civilians returned</div>
+      </div>
+      <div class="op-card">
+        <div class="op-year">2009–2010</div>
+        <div class="op-name">Operation Rah-e-Nijat</div>
+        <div class="op-urdu">راہِ نجات — Path of Salvation</div>
+        <div class="op-desc">Cleared South Waziristan of TTP strongholds following the Swat success. Army entered Mehsud-controlled Kotkai, the birthplace of TTP founder Baitullah Mehsud. Over 10,000 km² of mountainous terrain cleared in under 6 months.</div>
+        <div class="op-result">✓ South Waziristan TTP expelled</div>
+      </div>
+      <div class="op-card">
+        <div class="op-year">2014–2016</div>
+        <div class="op-name">Operation Zarb-e-Azb</div>
+        <div class="op-urdu">ضربِ عضب — Strike of the Prophet's Sword</div>
+        <div class="op-desc">Pakistan's largest-ever military offensive. 30,000+ troops entered North Waziristan targeting TTP, Haqqani Network, Al-Qaeda, Islamic Movement of Uzbekistan, East Turkestan Islamic Movement, and other groups. Hundreds of tunnels, weapon factories, and IED-making facilities destroyed. 3,400+ militants killed. GHQ called it a complete operational success.</div>
+        <div class="op-result">✓ North Waziristan cleared — 3,400+ militants killed</div>
+      </div>
+      <div class="op-card">
+        <div class="op-year">2017–Present</div>
+        <div class="op-name">Operation Radd-ul-Fasaad</div>
+        <div class="op-urdu">ردّ الفساد — Eliminating Corruption</div>
+        <div class="op-desc">Nationwide operation targeting sleeper cells, weapons caches, and financial networks. Conducted through intelligence-based operations (IBOs) in coordination with law enforcement agencies. By 2024, over 58,000 IBOs conducted across Pakistan, recovering thousands of weapons and dismantling dozens of terrorist networks.</div>
+        <div class="op-result">✓ 58,000+ intelligence-based operations</div>
+      </div>
+      <div class="op-card">
+        <div class="op-year">2022–Present</div>
+        <div class="op-name">Operation Azm-e-Istehkam</div>
+        <div class="op-urdu">عزمِ استحکام — Resolve for Stability</div>
+        <div class="op-desc">Renewed large-scale operations in response to resurgent TTP activity post-U.S. withdrawal from Afghanistan. Targeting both KPK and Balochistan. Simultaneously accelerated Afghanistan border fencing (2,600km+), CPEC security hardening, and IBOs against BLA and BLF in Balochistan. Ongoing as of April 2026.</div>
+        <div class="op-result">⬡ Ongoing — April 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPS STRUCTURE -->
+<section id="corps">
+  <div class="container">
+    <div class="sec-label">Order of Battle</div>
+    <h2 class="sec-title">Corps, Divisions &amp; <em>Structure</em></h2>
+    <p class="sec-desc">The Pakistan Army is organized into 9 Corps, each commanding multiple divisions across a geographic or operational area.</p>
+    <table class="corps-table">
+      <thead>
+        <tr><th>Corps</th><th>HQ</th><th>Province / Region</th><th>Type</th><th>Primary Mission</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="corps-num">I Corps</td><td class="corps-hq">Mangla</td><td>Punjab / LoC</td><td><span class="role-badge">Strike Corps</span></td><td>Offensive operations, cross-border strike capability</td></tr>
+        <tr><td class="corps-num">II Corps</td><td class="corps-hq">Multan</td><td>Central Punjab</td><td><span class="role-badge">Holding Corps</span></td><td>Defence of central sector, reserve deployment</td></tr>
+        <tr><td class="corps-num">IV Corps</td><td class="corps-hq">Lahore</td><td>Eastern Punjab</td><td><span class="role-badge">Strike Corps</span></td><td>India border defence, Lahore sector protection</td></tr>
+        <tr><td class="corps-num">V Corps</td><td class="corps-hq">Karachi</td><td>Sindh & Balochistan</td><td><span class="role-badge">Holding Corps</span></td><td>Southern command, coastal & port defence</td></tr>
+        <tr><td class="corps-num">X Corps</td><td class="corps-hq">Rawalpindi</td><td>Federal & AJK</td><td><span class="role-badge">Strategic Reserve</span></td><td>LoC operations, capital security, GHQ reserve</td></tr>
+        <tr><td class="corps-num">XI Corps</td><td class="corps-hq">Peshawar</td><td>KPK & Former FATA</td><td><span class="role-badge">Counter-Insurgency</span></td><td>Operations Zarb-e-Azb / Azm-e-Istehkam, tribal security</td></tr>
+        <tr><td class="corps-num">XII Corps</td><td class="corps-hq">Quetta</td><td>Balochistan</td><td><span class="role-badge">Western Command</span></td><td>Afghan & Iran border, CPEC route security, anti-BLA ops</td></tr>
+        <tr><td class="corps-num">XXX Corps</td><td class="corps-hq">Gujranwala</td><td>North Punjab</td><td><span class="role-badge">Armoured Corps</span></td><td>Armoured & mechanized warfare, tank formations</td></tr>
+        <tr><td class="corps-num">XXXI Corps</td><td class="corps-hq">Bahawalpur</td><td>Southern Punjab</td><td><span class="role-badge">Desert Warfare</span></td><td>Cholistan & Thar desert operations</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-label" style="margin-top:3rem;">Elite &amp; Special Units</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--cream);margin-bottom:0.5rem;">Special Forces &amp; <em style="color:var(--gold);font-style:normal;">Specialized Arms</em></h3>
+    <div class="sf-grid">
+      <div class="sf-card"><span class="sf-badge red">Tier 1 Elite</span><h4>Special Services Group (SSG)</h4><p>Pakistan's premier special operations force, founded 1956. Specializes in counter-terrorism, direct action, HALO/HAHO parachute insertion, hostage rescue, and unconventional warfare. The 18-month selection course has under 5% pass rate. Known as the "Black Storks." Deployed in every major operation since Swat.</p></div>
+      <div class="sf-card"><span class="sf-badge gold">Mountain Elite</span><h4>Northern Light Infantry (NLI)</h4><p>A specialized mountain warfare regiment recruited exclusively from Gilgit-Baltistan. World experts in high-altitude combat, glacier warfare, and arctic conditions. Primary defenders of the Siachen region at 6,000m+. Converted from scouts to a regular regiment in 1999 — earning the conversion in blood at Kargil.</p></div>
+      <div class="sf-card"><span class="sf-badge green">Aviation</span><h4>Army Aviation Corps</h4><p>Operates AH-1Z Viper attack helicopters, Mi-17 transport helicopters, and a growing fleet of UAV/drone systems including Chinese-supplied WZ-10 armed drones. Provides close air support, reconnaissance, MEDEVAC, and troop transport across all theatres. Critical in Swat and North Waziristan operations.</p></div>
+      <div class="sf-card"><span class="sf-badge red">Nuclear</span><h4>Strategic Plans Division (SPD)</h4><p>Manages Pakistan's nuclear arsenal, delivery systems, and the nuclear command-and-control structure under the National Command Authority. Responsible for the operational readiness of land-based ballistic missiles (Ghaznavi, Shaheen series), sea-based deterrent, and nuclear doctrine. An army two-star heads the division.</p></div>
+      <div class="sf-card"><span class="sf-badge green">CPEC Security</span><h4>Special Security Division (SSD)</h4><p>A dedicated formation of 15,000+ troops established 2015 to protect Chinese CPEC workers, engineers, and infrastructure. Organized into 9 battalions guarding projects from Gwadar Port to the KKH in Gilgit-Baltistan. As CPEC investment has grown beyond $65 billion, the SSD's role has expanded proportionally.</p></div>
+      <div class="sf-card"><span class="sf-badge gold">Intelligence</span><h4>Directorate of Military Intelligence (MI)</h4><p>The army's internal intelligence arm responsible for counterintelligence, field security, operational intelligence, and threat assessment at formation level. Works in coordination with ISI on national security matters and conducts intelligence-based operations in all active theatres.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDALS -->
+<section id="medals">
+  <div class="container">
+    <div class="sec-label">Honours System</div>
+    <h2 class="sec-title">Military Awards &amp; <em>Decorations</em></h2>
+    <p class="sec-desc">Pakistan's system of military honours recognises acts from supreme battlefield gallantry to distinguished careers of service. In order of precedence:</p>
+    <div class="medal-grid">
+      <div class="medal-card">
+        <div class="medal-icon-box r1">🏅</div>
+        <div><h4>Nishan-e-Haider (نشان حیدر)</h4><div class="medal-grade">Grade 1 — Highest Military Honour</div><p>Pakistan's supreme military award, equivalent to the Victoria Cross. Awarded only 6 times since 1947, all posthumously. Recipients' names are inscribed at GHQ Rawalpindi permanently.</p></div>
+      </div>
+      <div class="medal-card">
+        <div class="medal-icon-box r2">🎖</div>
+        <div><h4>Hilal-e-Jurat (ہلال جرأت)</h4><div class="medal-grade">Grade 2 — Crescent of Courage</div><p>Second highest gallantry award. Given for conspicuous acts of bravery in the face of the enemy. A bar with rosette may be awarded for a second act of equal distinction.</p></div>
+      </div>
+      <div class="medal-card">
+        <div class="medal-icon-box r3">⭐</div>
+        <div><h4>Sitara-e-Jurat (ستارہ جرأت)</h4><div class="medal-grade">Grade 3 — Star of Courage</div><p>Awarded for individual acts of conspicuous bravery and leadership under fire. Frequently awarded to junior officers and NCOs who display exceptional courage in close combat.</p></div>
+      </div>
+      <div class="medal-card">
+        <div class="medal-icon-box r4">🏵</div>
+        <div><h4>Tamgha-e-Jurat (تمغہ جرأت)</h4><div class="medal-grade">Grade 4 — Medal of Courage</div><p>For acts of bravery that distinguish the recipient from peers. Frequently awarded to soldiers in counter-insurgency and anti-terror operations on the front lines.</p></div>
+      </div>
+      <div class="medal-card">
+        <div class="medal-icon-box r5">🎗</div>
+        <div><h4>Sitara-e-Basalat (ستارہ بسالت)</h4><div class="medal-grade">Meritorious — Star of Distinction</div><p>Awarded for distinguished service over a period, or for a single act of exceptional merit. Given to officers who demonstrate exemplary leadership and professionalism beyond normal duty.</p></div>
+      </div>
+      <div class="medal-card">
+        <div class="medal-icon-box r6">🏆</div>
+        <div><h4>Tamgha-e-Basalat (تمغہ بسالت)</h4><div class="medal-grade">Meritorious — Distinguished Service</div><p>Pakistan's most widely awarded gallantry medal. Available to all ranks from Sepoy upwards. Given for individual acts of bravery or meritorious service in operational areas.</p></div>
+      </div>
+    </div>
+
+    <div class="sec-label" style="margin-top:2rem;">Campaign &amp; Service Medals</div>
+    <div class="sf-grid">
+      <div class="sf-card"><span class="sf-badge gold">UN Service</span><h4>United Nations Service Medal</h4><p>Awarded to personnel who serve 90+ days in UN peacekeeping missions. Pakistan has earned this medal across 45+ missions in 30+ countries, logging over 200,000 cumulative troop-months of UN service.</p></div>
+      <div class="sf-card"><span class="sf-badge green">Zarb-e-Azb</span><h4>Zarb-e-Azb Campaign Medal</h4><p>Awarded to all personnel who participated in Operation Zarb-e-Azb (2014–2016) in North Waziristan — Pakistan's largest military operation that cleared thousands of km² of militant territory.</p></div>
+      <div class="sf-card"><span class="sf-badge red">Siachen</span><h4>Siachen Glacier Service Medal</h4><p>Awarded to soldiers who serve at posts on the Siachen Glacier above 5,000m. Considered one of the most physically demanding postings of any military in the world, with temperatures reaching -60°C.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PEACEKEEPING -->
+<section id="peacekeeping">
+  <div class="container">
+    <div class="sec-label">Global Service</div>
+    <h2 class="sec-title">UN Peacekeeping — <em>World's Largest Contributor</em></h2>
+    <div class="pk-intro">
+      <div>
+        <p>Pakistan has been one of the world's largest contributors to United Nations peacekeeping operations for over three decades. The army has deployed troops, military observers, police, and staff officers to over 45 missions across 30+ countries on five continents — from the jungles of Congo to the deserts of Darfur, from the streets of Beirut to the mountains of Sierra Leone.</p>
+        <p style="margin-top:1rem;">Pakistani peacekeepers have served in Somalia, Bosnia, Rwanda, Sierra Leone, Liberia, Haiti, Sudan, South Sudan, Mali, Central African Republic, Côte d'Ivoire, Lebanon (UNIFIL), Cyprus, and more. The army collectively has logged over 200,000 troop-months of UN service — more than any other nation in history.</p>
+      </div>
+      <div class="pk-bignum">
+        <div class="num">45+</div>
+        <div class="lbl">UN Missions Served</div>
+        <br>
+        <div class="num" style="font-size:3.5rem;">200K+</div>
+        <div class="lbl">Troop-Months of Service</div>
+      </div>
+    </div>
+    <div class="pk-missions">
+      <div class="pk-card"><div class="pk-flag">🇸🇴</div><h4>Somalia (UNOSOM)</h4><p>Pakistani peacekeepers were among the first to deploy to Somalia in 1992. 24 Pakistani soldiers were killed in the Battle of Mogadishu in June 1993 in one of the deadliest days for UN peacekeepers.</p><span class="pk-status completed">Completed</span></div>
+      <div class="pk-card"><div class="pk-flag">🇨🇩</div><h4>Congo (MONUSCO)</h4><p>One of Pakistan's largest ongoing commitments. Pakistani troops form a significant portion of MONUSCO's force in DRC, providing infantry support, force protection, and peacekeeping patrols in eastern Congo.</p><span class="pk-status active">Active 2026</span></div>
+      <div class="pk-card"><div class="pk-flag">🇱🇧</div><h4>Lebanon (UNIFIL)</h4><p>Pakistan contributes to UNIFIL, the UN Interim Force in Lebanon, monitoring the Blue Line between Lebanon and Israel. Pakistani peacekeepers provide engineering support, medical services, and observation posts.</p><span class="pk-status active">Active 2026</span></div>
+      <div class="pk-card"><div class="pk-flag">🇸🇸</div><h4>South Sudan (UNMISS)</h4><p>Pakistani military observers and staff officers serve in UNMISS, monitoring ceasefires and supporting the peace process in South Sudan following the civil war that began in 2013.</p><span class="pk-status active">Active 2026</span></div>
+      <div class="pk-card"><div class="pk-flag">🇸🇱</div><h4>Sierra Leone (UNAMSIL)</h4><p>Pakistan was the leading contributor to UNAMSIL, helping disarm the RUF rebel group after a decade of brutal civil war. Pakistani troops played a decisive role in ending the Sierra Leone conflict.</p><span class="pk-status completed">Completed 2005</span></div>
+      <div class="pk-card"><div class="pk-flag">🇸🇩</div><h4>Sudan / Darfur</h4><p>Pakistani peacekeepers served in both UNAMID (Darfur) and UNMIS (Sudan), providing some of the largest contingents in what was then the world's largest ongoing humanitarian crisis.</p><span class="pk-status completed">Completed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div class="container">
+    <div class="sec-label">Chain of Command</div>
+    <h2 class="sec-title">Leadership &amp; <em>Command</em></h2>
+    <p class="sec-desc">Chiefs of Army Staff have defined the army's character across seventy-eight years. From British-led transition to the nuclear era.</p>
+    <div class="lead-grid">
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">AK</div><div class="lead-name">General Ayub Khan</div><div class="lead-title">1st Pakistani COAS</div></div>
+        <div class="lead-body"><p>First Pakistani-born Commander-in-Chief (1951–58). Later became President of Pakistan. Modernized the army during the Cold War era with U.S. assistance. Led Pakistan through SEATO and CENTO alliances.</p><div class="lead-term">Term: 1951–1958</div></div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">YK</div><div class="lead-name">General Yahya Khan</div><div class="lead-title">COAS & President</div></div>
+        <div class="lead-body"><p>Led Pakistan during the 1971 war and the catastrophic loss of East Pakistan. His tenure ended in the military's worst defeat. The tragedy led to sweeping civilianisation reforms under Z.A. Bhutto.</p><div class="lead-term">Term: 1966–1971</div></div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">ZU</div><div class="lead-name">General Zia-ul-Haq</div><div class="lead-title">COAS & President</div></div>
+        <div class="lead-body"><p>Longest-serving military ruler (1977–88). Coordinated the anti-Soviet Afghan jihad with the CIA. Oversaw the army's Islamisation. Died in a plane crash in August 1988 under mysterious circumstances.</p><div class="lead-term">Term: 1976–1988</div></div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">PM</div><div class="lead-name">General Pervez Musharraf</div><div class="lead-title">COAS & President</div></div>
+        <div class="lead-body"><p>Orchestrated the Kargil operation, then seized power in 1999 coup. Post-9/11, reversed Pakistan's Afghan policy and joined the War on Terror. Resigned in 2008 under political pressure. Died in exile 2023.</p><div class="lead-term">Term: 1998–2007</div></div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">RB</div><div class="lead-name">General Raheel Sharif</div><div class="lead-title">COAS — Zarb-e-Azb Era</div></div>
+        <div class="lead-body"><p>Launched Operation Zarb-e-Azb in 2014 — the army's largest offensive. Directed the response to the APS massacre and the National Action Plan. Retired in 2016; led the Saudi-led Islamic Military Counter Terrorism Coalition.</p><div class="lead-term">Term: 2013–2016</div></div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-top"><div class="lead-avatar">AM</div><div class="lead-name">General Asim Munir</div><div class="lead-title">Current COAS (2026)</div></div>
+        <div class="lead-body"><p>Appointed COAS in November 2022. Has overseen Operation Azm-e-Istehkam, accelerated Afghanistan border fencing, and continued CPEC security expansion. Manages ongoing counterterrorism in KPK and Balochistan as of April 2026.</p><div class="lead-term">Term: 2022–Present</div></div>
+      </div>
+    </div>
+
+    <div class="cmd-chart">
+      <h4>Command Structure</h4>
+      <div class="cmd-row"><div class="cmd-box top">President of Pakistan — Supreme Commander</div></div>
+      <div class="cmd-row"><span class="cmd-arrow">↓</span></div>
+      <div class="cmd-row"><div class="cmd-box top">Chief of Army Staff (COAS) — General</div></div>
+      <div class="cmd-row"><span class="cmd-arrow">↓</span></div>
+      <div class="cmd-row">
+        <div class="cmd-box">Vice COAS</div>
+        <div class="cmd-box">CJCSC</div>
+        <div class="cmd-box">CGS</div>
+        <div class="cmd-box">Adjutant General</div>
+        <div class="cmd-box">QMG</div>
+      </div>
+      <div class="cmd-row"><span class="cmd-arrow">↓</span></div>
+      <div class="cmd-row">
+        <div class="cmd-box">9 Corps Commanders (Lt. General)</div>
+      </div>
+      <div class="cmd-row"><span class="cmd-arrow">↓</span></div>
+      <div class="cmd-row">
+        <div class="cmd-box">Divisions → Brigades → Regiments → Battalions → Companies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEOGRAPHY & TERRAIN -->
+<section id="geography">
+  <div class="container">
+    <div class="sec-label">Terrain &amp; Deployment</div>
+    <h2 class="sec-title">Pakistan's <em>Strategic Geography</em></h2>
+    <p class="sec-desc">The army operates across the most varied and extreme terrain of any military in the world — from -60°C glaciers to 50°C deserts.</p>
+    <div class="geo-grid">
+      <div class="geo-card"><div class="geo-icon">🏔</div><h4>Siachen Glacier</h4><p>World's highest battlefield at 6,000m+. NLI soldiers maintain posts year-round in -60°C temperatures. More casualties from weather than enemy fire.</p></div>
+      <div class="geo-card"><div class="geo-icon">🏜</div><h4>Cholistan Desert</h4><p>XXXI Corps specializes in desert warfare across the Cholistan and Thar regions. Extreme heat, sand, and long supply lines define operations here.</p></div>
+      <div class="geo-card"><div class="geo-icon">🌊</div><h4>Makran Coast</h4><p>V Corps guards Pakistan's 1,046km coastline. Gwadar Port — the CPEC centrepiece — is heavily guarded against maritime threats and BLA sabotage.</p></div>
+      <div class="geo-card"><div class="geo-icon">🏔</div><h4>Hindu Kush / KPK</h4><p>XI Corps operates in the most rugged counter-insurgency terrain on earth. The tribal mountains of former FATA remain the army's most contested operational zone.</p></div>
+      <div class="geo-card"><div class="geo-icon">🌾</div><h4>Punjab Plains</h4><p>The heartland of conventional armoured warfare. Multiple Corps guard the Eastern border — the primary front against India — across the flat plains suited to tank battles.</p></div>
+      <div class="geo-card"><div class="geo-icon">🛣</div><h4>Karakoram Highway</h4><p>The KKH — the world's highest paved international road — connects Pakistan to China. Army engineers maintain and guard this critical artery through Gilgit-Baltistan.</p></div>
+      <div class="geo-card"><div class="geo-icon">🏗</div><h4>Balochistan Plateau</h4><p>XII Corps covers Pakistan's largest province — 44% of land area. Operations against BLA, BLF, and CPEC protection define the mission in this resource-rich but restive region.</p></div>
+      <div class="geo-card"><div class="geo-icon">🏙</div><h4>Urban Centres</h4><p>The army maintains rapid reaction capability for urban operations in Karachi, Lahore, and Islamabad — the three megacities that form Pakistan's economic and political heart.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISASTER RELIEF -->
+<section id="disasters">
+  <div class="container">
+    <div class="sec-label">Nation's First Responder</div>
+    <h2 class="sec-title">Disaster Relief — <em>Civil-Military Operations</em></h2>
+    <p class="sec-desc">In a country that faces earthquakes, floods, and avalanches routinely, the Pakistan Army is the first and often only institution capable of rapid large-scale response.</p>
+    <div class="disaster-grid">
+      <div class="dis-card">
+        <div class="dis-year">2005</div>
+        <div class="dis-name">Kashmir Earthquake</div>
+        <p>7.6 magnitude — 87,000 killed, 3.5 million homeless. Army deployed 100,000 troops, engineers, and medics. Coordinated international relief via army logistics networks. Helicopter operations in cut-off mountain villages saved thousands from winter exposure.</p>
+        <div class="dis-scale">⬡ 100,000 Troops Deployed</div>
+      </div>
+      <div class="dis-card">
+        <div class="dis-year">2010</div>
+        <div class="dis-name">Super Floods</div>
+        <p>Worst floods in Pakistan's recorded history. One-fifth of the country inundated. 20 million affected. Army deployed 170,000 troops, rescued 500,000+ civilians, built 278 emergency bridges, and restored 8,000km of roads during and after the disaster.</p>
+        <div class="dis-scale">⬡ 170,000 Troops — Largest Relief Operation</div>
+      </div>
+      <div class="dis-card">
+        <div class="dis-year">2012</div>
+        <div class="dis-name">Gayari Avalanche</div>
+        <p>138 soldiers buried alive at Gayari post on the Siachen Glacier — the single worst disaster in Pakistan Army history. A rescue operation lasting weeks in extreme altitude and cold conditions recovered bodies from under 25 metres of ice and snow.</p>
+        <div class="dis-scale">⬡ 138 Soldiers Lost — Worst Single Disaster</div>
+      </div>
+      <div class="dis-card">
+        <div class="dis-year">2015</div>
+        <div class="dis-name">Chitral Floods</div>
+        <p>Flash floods and landslides cut off Chitral district entirely. Army helicopters conducted 1,200+ sorties to deliver relief supplies and evacuate the sick and injured. Army engineers rebuilt the destroyed Lowari Tunnel access road in record time.</p>
+        <div class="dis-scale">⬡ 1,200+ Helicopter Sorties</div>
+      </div>
+      <div class="dis-card">
+        <div class="dis-year">2022</div>
+        <div class="dis-name">Catastrophic Floods</div>
+        <p>One-third of Pakistan submerged. 33 million affected, 1,700 killed. Army deployed 177,000 troops, 50+ helicopters, and 1,200 boats — rescuing over 900,000 stranded civilians in the largest humanitarian operation in Pakistan's history.</p>
+        <div class="dis-scale">⬡ 177,000 Troops — 900,000 Rescued</div>
+      </div>
+      <div class="dis-card">
+        <div class="dis-year">2023–26</div>
+        <div class="dis-name">Ongoing NDMA Support</div>
+        <p>The army maintains permanent National Disaster Management Authority (NDMA) liaison teams, pre-positioned engineering units, and rapid reaction aviation. In early 2026, army responded to flash floods in KPK and GB within 24 hours of disaster onset.</p>
+        <div class="dis-scale">⬡ Year-Round NDMA Integration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODERN ERA -->
+<section id="modern">
+  <div class="container">
+    <div class="sec-label">2020s & Beyond</div>
+    <h2 class="sec-title">Modernisation — <em>Army 2026</em></h2>
+    <p class="sec-desc">The Pakistan Army of 2026 is a transformed force — nuclear-capable, digitally networked, and simultaneously managing conventional deterrence and active counter-insurgency.</p>
+    <div class="modern-grid">
+      <div class="modern-text">
+        <h3>Transformation Since 2010</h3>
+        <p>The counter-insurgency crucible of the 2000s and 2010s fundamentally reshaped the Pakistan Army. A force built for conventional warfare against India had to adapt — rapidly — to fight a non-state insurgency in its own backyard. The lessons learned in Swat, Waziristan, and the tribal belt created a more versatile, battle-hardened army.</p>
+        <p>By 2026, the army operates across six simultaneous mission sets: conventional deterrence (India), nuclear deterrence, counter-insurgency (KPK/Balochistan), CPEC security, UN peacekeeping, and domestic disaster relief — a breadth unmatched by armies of similar size.</p>
+        <ul class="modern-list">
+          <li>Inducted Al-Khalid II Main Battle Tank — Pakistan's most advanced domestic tank platform</li>
+          <li>AH-1Z Viper attack helicopters replacing aging Cobras in Army Aviation</li>
+          <li>Chinese-supplied Wing Loong and CASC Rainbow UAVs operational</li>
+          <li>2,600km+ Afghanistan border fence completed (2021–2024)</li>
+          <li>Nationwide National Command Authority communication network upgrade</li>
+          <li>CPEC Special Security Division expanded to 15,000+ personnel</li>
+          <li>Night vision, body armour, and modern small arms standardised across all units</li>
+          <li>Cyber warfare and electronic intelligence capabilities being established</li>
+        </ul>
+      </div>
+      <div class="tech-cards">
+        <div class="tech-card"><div class="tech-icon">🛡</div><div><h4>Nuclear Deterrence</h4><p>Pakistan maintains a credible second-strike capability with land-based Shaheen series missiles, short-range Nasr tactical nuclear weapons, and a developing sea-based deterrent via the Babur-3 SLCM. Doctrine remains "minimum credible deterrence."</p></div></div>
+        <div class="tech-card"><div class="tech-icon">🚁</div><div><h4>Drone Warfare</h4><p>The army has integrated armed drones extensively since 2015. Pakistani-made Burraq and Shahpar drones have conducted hundreds of strikes in tribal areas. Chinese WZ-10 armed drones added attack helicopter-equivalent capability.</p></div></div>
+        <div class="tech-card"><div class="tech-icon">🛰</div><div><h4>Surveillance & ISR</h4><p>Integration of satellite imagery, drone ISR feeds, and signals intelligence has transformed targeting precision. Intelligence-based operations now account for the majority of counter-terrorism action — dramatically reducing collateral damage versus conventional sweeps.</p></div></div>
+        <div class="tech-card"><div class="tech-icon">🌐</div><div><h4>CPEC Security Architecture</h4><p>A dedicated digital command and control network links SSD battalions along CPEC routes. Thermal imaging towers, reaction force bases every 50km, and joint civil-military coordination centres protect Pakistan's most important economic infrastructure.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-crescent">☪</div>
+  <div class="footer-title">KNOW ABOUT PAKISTAN</div>
+  <div class="footer-motto">"Iman, Taqwa, Jihad fi Sabilillah"</div>
+  <div class="footer-line"></div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(255,255,255,0.3);max-width:600px;margin:0 auto 1.5rem;line-height:1.7;font-style:italic;">
+    From the first shot fired in Kashmir in 1947 to the ongoing operations of April 2026 — the Pakistan Army has stood as the nation's unwavering shield. 200,000+ soldiers have given everything. Their sacrifice is the foundation on which this nation stands.
+  </div>
+  <div class="footer-line"></div>
+  <div class="footer-meta">Know About Pakistan — Historical Record 1947–2026 · Updated April 25, 2026</div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll('.reveal,.tl-entry').forEach(el=>{
+  observer.observe(el);
+});
+
+// Nav active state
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(window.scrollY >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(a=>{
+    a.style.color = a.getAttribute('href')==='#'+current ? 'var(--gold)' : '';
+  });
+});
+</script>
+</body>
+</html>
